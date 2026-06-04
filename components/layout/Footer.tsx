@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const serviceLinks = [
   { href: '/services/consulting', label: 'Consulting' },
@@ -18,9 +19,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-7 h-7 border border-gold rotate-45 flex-shrink-0" />
+              <Image src="/logo.png" alt="Finvesco International" width={36} height={36} className="object-contain" />
               <div className="flex flex-col leading-none">
-                <span className="font-serif text-lg text-offwhite tracking-widest uppercase">Finvesco</span>
+                <span className="font-serif text-lg text-offwhite tracking-widest uppercase">FinVesco</span>
                 <span className="font-sans text-[9px] text-gold tracking-[0.35em] uppercase">International</span>
               </div>
             </div>

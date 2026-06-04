@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import MagneticButton from '@/components/shared/MagneticButton'
@@ -35,11 +36,15 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="group flex items-center gap-3">
-            <div className="w-8 h-8 border border-gold rotate-45 group-hover:rotate-0 transition-transform duration-500 flex items-center justify-center">
-              <div className="w-full h-full bg-gold/10 group-hover:bg-gold/20 transition-colors" />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Finvesco International"
+              width={40}
+              height={40}
+              className="object-contain group-hover:opacity-90 transition-opacity duration-300"
+            />
             <div className="flex flex-col leading-none">
-              <span className="font-serif text-lg text-offwhite tracking-widest uppercase">Finvesco</span>
+              <span className="font-serif text-lg text-offwhite tracking-widest uppercase">FinVesco</span>
               <span className="font-sans text-[9px] text-gold tracking-[0.35em] uppercase">International</span>
             </div>
           </Link>
