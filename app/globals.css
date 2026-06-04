@@ -1,19 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
+  /* Colors */
   --color-black:      #060810;
   --color-navy:       #0A0F1E;
   --color-surface:    #0F1628;
   --color-border:     #1E2A45;
   --color-gold:       #C9A84C;
   --color-gold-light: #E8C97A;
-  --color-white:      #F0F2F8;
+  --color-offwhite:   #F0F2F8;
   --color-muted:      #7A8BAA;
-  --nav-height:       72px;
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  /* Animations */
+  --animate-marquee:    marquee 30s linear infinite;
+  --animate-marquee2:   marquee2 30s linear infinite;
+  --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-float:      float 6s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+  @keyframes marquee2 {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.4; }
+    50%       { opacity: 0.9; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-12px); }
+  }
+}
+
+/* CSS custom properties for use in non-Tailwind contexts */
+:root {
+  --nav-height: 72px;
 }
 
 * { box-sizing: border-box; padding: 0; margin: 0; }
@@ -26,19 +58,22 @@ html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--color-navy);
-  color: var(--color-white);
+  color: var(--color-offwhite);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Gold scrollbar */
 ::-webkit-scrollbar        { width: 4px; }
 ::-webkit-scrollbar-track  { background: var(--color-navy); }
 ::-webkit-scrollbar-thumb  { background: var(--color-gold); border-radius: 2px; }
 
+/* Gold selection */
 ::selection { background: var(--color-gold); color: var(--color-black); }
 
+/* Noise texture overlay */
 body::before {
   content: '';
   position: fixed;
@@ -49,6 +84,7 @@ body::before {
   opacity: 0.04;
 }
 
+/* Utility classes */
 .gold-line {
   width: 48px;
   height: 2px;
