@@ -3,15 +3,17 @@ import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
 export default function CustomCursor() {
+  const [mounted, setMounted] = useState(false)
   const [isTouch, setIsTouch] = useState(false)
-  const cursorX = useMotionValue(-100)
-  const cursorY = useMotionValue(-100)
+  const cursorX   = useMotionValue(-100)
+  const cursorY   = useMotionValue(-100)
   const springX   = useSpring(cursorX, { stiffness: 500, damping: 40 })
   const springY   = useSpring(cursorY, { stiffness: 500, damping: 40 })
   const followerX = useSpring(cursorX, { stiffness: 120, damping: 20 })
   const followerY = useSpring(cursorY, { stiffness: 120, damping: 20 })
 
   useEffect(() => {
+    setMounted(true)
     setIsTouch(window.matchMedia('(pointer: coarse)').matches)
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX)
@@ -21,7 +23,7 @@ export default function CustomCursor() {
     return () => window.removeEventListener('mousemove', move)
   }, [cursorX, cursorY])
 
-  if (isTouch) return null
+  if (!mounted || isTouch) return null
 
   return (
     <>

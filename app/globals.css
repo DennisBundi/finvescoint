@@ -2,6 +2,24 @@
 
 @import "tailwindcss";
 
+/* Keyframes — must be outside @theme in Tailwind v4 */
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes marquee2 {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
 @theme {
   /* Colors */
   --color-black:      #060810;
@@ -23,27 +41,8 @@
   --animate-marquee2:   marquee2 30s linear infinite;
   --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
   --animate-float:      float 6s ease-in-out infinite;
-
-  /* Keyframes */
-  @keyframes marquee {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-  }
-  @keyframes marquee2 {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(0%); }
-  }
-  @keyframes glowPulse {
-    0%, 100% { opacity: 0.4; }
-    50%       { opacity: 0.9; }
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-12px); }
-  }
 }
 
-/* CSS custom properties for use in non-Tailwind contexts */
 :root {
   --nav-height: 72px;
 }
@@ -65,15 +64,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Gold scrollbar */
 ::-webkit-scrollbar        { width: 4px; }
 ::-webkit-scrollbar-track  { background: var(--color-navy); }
 ::-webkit-scrollbar-thumb  { background: var(--color-gold); border-radius: 2px; }
 
-/* Gold selection */
 ::selection { background: var(--color-gold); color: var(--color-black); }
 
-/* Noise texture overlay */
 body::before {
   content: '';
   position: fixed;
@@ -84,7 +80,6 @@ body::before {
   opacity: 0.04;
 }
 
-/* Utility classes */
 .gold-line {
   width: 48px;
   height: 2px;
