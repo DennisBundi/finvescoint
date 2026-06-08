@@ -52,11 +52,11 @@ export default function ContactSection() {
           {/* Left — info */}
           <motion.div variants={slideLeft}>
             <SectionLabel text="Get In Touch" />
-            <h1 className="font-serif text-5xl md:text-7xl text-offwhite leading-[0.9] mb-6">
+            <h1 className="font-serif text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-[6.5vw] md:leading-[0.9] text-offwhite mb-6">
               Let&apos;s Build<br />
               <span className="italic text-gradient-gold">Together</span>
             </h1>
-            <p className="text-muted leading-relaxed mb-14 max-w-sm">
+            <p className="text-muted text-base md:text-xl font-sans font-light leading-relaxed mb-14 max-w-sm">
               Let Finvesco International know how we can be of service.
               Our team responds to every enquiry within 24 hours.
             </p>
@@ -167,8 +167,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-3 bg-gold text-black text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300 mt-2"
-                  style={{ height: '52px', paddingLeft: '40px', paddingRight: '40px' }}
+                  className="btn-primary mt-2"
                 >
                   Send Message
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

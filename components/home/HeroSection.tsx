@@ -6,7 +6,7 @@ import MagneticButton from '@/components/shared/MagneticButton'
 export default function HeroSection() {
   return (
     <section
-      className="relative h-screen flex items-center overflow-hidden snap-start"
+      className="relative h-screen flex items-center overflow-hidden snap-start snap-always"
       style={{
         backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: 'cover',
@@ -70,8 +70,7 @@ export default function HeroSection() {
           <MagneticButton>
             <Link
               href="/services"
-              className="inline-flex items-center gap-3 bg-gold text-black text-xs tracking-[0.2em] uppercase font-semibold hover:bg-gold-light transition-colors duration-300 whitespace-nowrap"
-              style={{ height: '30px', paddingLeft: '28px', paddingRight: '28px' }}
+              className="btn-primary"
             >
               Our Services
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="flex-shrink-0">
@@ -82,8 +81,7 @@ export default function HeroSection() {
           <MagneticButton>
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 border border-offwhite/40 text-offwhite text-xs tracking-[0.2em] uppercase font-medium hover:border-gold hover:text-gold transition-all duration-300 whitespace-nowrap"
-              style={{ height: '30px', paddingLeft: '28px', paddingRight: '28px' }}
+              className="btn-ghost"
             >
               Our Story
             </Link>

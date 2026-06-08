@@ -42,7 +42,7 @@ export default function AboutMission() {
             {PILLARS.map((item) => (
               <motion.div key={item.label} variants={fadeUp} className="group">
                 <div className="gold-line mb-6 group-hover:w-full" style={{ transition: 'width 500ms ease' }} />
-                <h3 className="font-serif text-2xl text-navy mb-4">{item.label}</h3>
+                <h3 className="font-serif text-2xl md:text-3xl text-navy mb-4">{item.label}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.body}</p>
               </motion.div>
             ))}

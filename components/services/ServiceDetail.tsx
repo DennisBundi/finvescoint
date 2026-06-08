@@ -43,7 +43,7 @@ export default function ServiceDetail({
           <motion.div variants={slideLeft} initial="hidden" animate={inView ? 'show' : 'hidden'}>
             <span className="font-mono text-xs text-gold/60 tracking-widest block mb-4">{num}</span>
             <SectionLabel text="Service" />
-            <h2 className="font-serif text-3xl md:text-5xl text-navy leading-tight mb-6">{title}</h2>
+            <h2 className="font-serif text-4xl md:text-6xl text-navy leading-tight mb-6">{title}</h2>
             {paragraphs.map((p, i) => (
               <p
                 key={i}
@@ -59,8 +59,7 @@ export default function ServiceDetail({
               <MagneticButton>
                 <Link
                   href={`/services/${slug}`}
-                  className="inline-flex items-center gap-3 bg-navy text-offwhite text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300"
-                  style={{ height: '48px', paddingLeft: '32px', paddingRight: '32px' }}
+                  className="btn-dark"
                 >
                   View Details
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none">

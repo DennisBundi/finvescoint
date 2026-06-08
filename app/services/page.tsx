@@ -19,11 +19,13 @@ export const metadata: Metadata = {
     'business due diligence Kenya',
     'proforma financials',
   ],
+  alternates: { canonical: '/services' },
   openGraph: {
     title: 'Financial Services | Finvesco International',
     description:
       'Comprehensive financial services for ambitious businesses — from Fractional CFO to Business Acquisitions, Financial Reporting, and Strategic Consulting.',
-    type: 'website',
+    url:      '/services',
+    type:     'website',
     siteName: 'Finvesco International',
   },
   twitter: {

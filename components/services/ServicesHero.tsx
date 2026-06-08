@@ -17,12 +17,12 @@ export default function ServicesHero() {
             <SectionLabel text="What We Do" />
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="font-serif text-5xl sm:text-6xl md:text-8xl text-offwhite leading-[0.9] mb-8 max-w-4xl">
+          <motion.h1 variants={fadeUp} className="font-serif text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-[6.5vw] md:leading-[0.9] text-offwhite mb-8 max-w-4xl">
             Precision Financial<br />
             <span className="italic text-gradient-gold">Services</span>
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
+          <motion.p variants={fadeUp} className="text-muted text-base md:text-xl font-sans font-light max-w-2xl leading-relaxed mb-12">
             From fractional CFO leadership to comprehensive financial reporting — our services
             are purpose-built for businesses that demand expertise, accountability, and
             measurable outcomes.

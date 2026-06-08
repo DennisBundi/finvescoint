@@ -21,7 +21,7 @@ export default function RelatedServices({ related }: Props) {
         <motion.div variants={staggerContainer} initial="hidden" animate={inView ? 'show' : 'hidden'}>
           <motion.div variants={fadeUp} className="mb-12 md:mb-16">
             <SectionLabel text="Explore More" />
-            <h2 className="font-serif text-3xl md:text-5xl text-offwhite leading-tight">
+            <h2 className="font-serif text-4xl md:text-6xl text-offwhite leading-tight">
               Related <span className="italic text-gradient-gold">Services</span>
             </h2>
           </motion.div>

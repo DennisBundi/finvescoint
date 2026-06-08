@@ -61,7 +61,7 @@ export default function Navbar() {
           <MagneticButton className="hidden md:block">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
+              className="btn-nav"
             >
               Engage Us
             </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
+                className="inline-flex items-center gap-2 h-[46px] px-6 border border-gold text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
               >
                 Engage Us
               </Link>

@@ -37,8 +37,7 @@ export default function ServiceDetailOverview({ service }: Props) {
             <MagneticButton>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-navy text-offwhite text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300"
-                style={{ height: '48px', paddingLeft: '28px', paddingRight: '28px' }}
+                className="btn-dark"
               >
                 Enquire Now
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">

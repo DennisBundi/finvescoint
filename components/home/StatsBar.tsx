@@ -9,7 +9,7 @@ export default function StatsBar() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   return (
-    <section ref={ref} className="relative py-16 md:py-28 border-y border-gray-200 bg-white snap-start">
+    <section ref={ref} className="relative py-16 md:py-28 border-y border-gray-200 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div variants={staggerContainer} initial="hidden" animate={inView ? 'show' : 'hidden'}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">

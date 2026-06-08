@@ -61,7 +61,7 @@
 
 html {
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
   overflow-x: hidden;
   width: 100%;
 }
@@ -123,4 +123,81 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ── Design System ── */
+
+/* Typography scale */
+/* h1 hero:    font-serif text-[2.75rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-[6.5vw] md:leading-[0.9] */
+/* h2 section: font-serif text-4xl md:text-6xl leading-tight */
+/* h3 card:    font-serif text-2xl md:text-3xl leading-snug */
+/* h4 step:    font-sans font-semibold text-base */
+
+/* Button utilities — shared dimensions, colour variants */
+@layer components {
+  .btn-base {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 52px;
+    padding-inline: 2.25rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  /* Gold fill */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    height: 52px; padding-inline: 2.25rem;
+    background-color: var(--color-gold); color: var(--color-black);
+    font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    transition: background-color 0.3s; white-space: nowrap;
+  }
+  .btn-primary:hover { background-color: var(--color-gold-light); }
+
+  /* Gold border */
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    height: 52px; padding-inline: 2.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-gold) 70%, transparent);
+    color: var(--color-gold);
+    font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: all 0.3s; white-space: nowrap;
+  }
+  .btn-secondary:hover { background-color: color-mix(in srgb, var(--color-gold) 10%, transparent); }
+
+  /* White/ghost border (on dark hero backgrounds) */
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    height: 52px; padding-inline: 2.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-offwhite) 40%, transparent);
+    color: var(--color-offwhite);
+    font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: all 0.3s; white-space: nowrap;
+  }
+  .btn-ghost:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+  /* Dark fill (inverted) */
+  .btn-dark {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    height: 52px; padding-inline: 2.25rem;
+    background-color: var(--color-navy); color: var(--color-offwhite);
+    font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    transition: all 0.3s; white-space: nowrap;
+  }
+  .btn-dark:hover { background-color: var(--color-gold); color: var(--color-black); }
+
+  /* Navbar — smaller footprint */
+  .btn-nav {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    height: 38px; padding-inline: 1.25rem;
+    border: 1px solid var(--color-gold); color: var(--color-gold);
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .btn-nav:hover { background-color: var(--color-gold); color: var(--color-black); }
 }

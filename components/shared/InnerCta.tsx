@@ -26,7 +26,7 @@ export default function InnerCta() {
             <div className="gold-line" style={{ transform: 'scaleX(-1)' }} />
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="font-serif text-4xl sm:text-5xl md:text-6xl text-offwhite leading-tight mb-6">
+          <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-6xl text-offwhite leading-tight mb-6">
             Ready to architect<br />
             <span className="italic text-gradient-gold">your growth?</span>
           </motion.h2>
@@ -38,7 +38,7 @@ export default function InnerCta() {
           <motion.div variants={fadeUp}>
             <MagneticButton className="inline-block">
               <Link href="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-gold text-black text-sm tracking-widest uppercase font-medium hover:bg-gold-light transition-colors duration-300">
+                className="btn-primary">
                 Engage Us
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

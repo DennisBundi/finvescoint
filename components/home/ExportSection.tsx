@@ -9,7 +9,7 @@ export default function ExportSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section ref={ref} className="py-28 md:py-52 bg-[#F4F2EE] snap-start">
+    <section ref={ref} className="min-h-screen flex flex-col justify-center py-20 bg-[#F4F2EE] snap-start snap-always">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div className="text-center mb-14 md:mb-24" variants={fadeUp} initial="hidden" animate={inView ? 'show' : 'hidden'}>
           <SectionLabel text="Portfolio Company" centered />
@@ -31,7 +31,7 @@ export default function ExportSection() {
               className="relative p-6 border border-gray-200 bg-white hover:border-gold/50 transition-all duration-300 group">
               <span className="font-mono text-xs text-gold/60 tracking-widest">{step.num}</span>
               <div className="gold-line my-4 group-hover:w-full" style={{ transition: 'width 500ms ease' }} />
-              <h3 className="text-navy font-sans font-medium mb-3">{step.title}</h3>
+              <h3 className="text-navy font-sans font-semibold text-base mb-3">{step.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}

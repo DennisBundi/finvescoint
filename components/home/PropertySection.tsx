@@ -9,12 +9,12 @@ export default function PropertySection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section ref={ref} className="py-28 md:py-52 bg-[#F7F5F0] snap-start">
+    <section ref={ref} className="min-h-screen flex flex-col justify-center py-20 bg-[#F7F5F0] snap-start snap-always">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <motion.div variants={slideLeft} initial="hidden" animate={inView ? 'show' : 'hidden'}>
             <SectionLabel text="Real Assets" />
-            <h2 className="font-serif text-4xl md:text-5xl text-navy leading-tight mb-6">
+            <h2 className="font-serif text-4xl md:text-6xl text-navy leading-tight mb-6">
               Property<br />
               <span className="italic text-gradient-gold">Investment</span>
             </h2>

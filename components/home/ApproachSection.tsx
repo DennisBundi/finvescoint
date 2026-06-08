@@ -9,7 +9,7 @@ export default function ApproachSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section ref={ref} className="py-28 md:py-52 bg-navy snap-start">
+    <section ref={ref} className="min-h-screen flex flex-col justify-center py-20 bg-navy snap-start snap-always">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="mb-12 md:mb-20">
           <SectionLabel text="How We Work" />
@@ -29,7 +29,7 @@ export default function ApproachSection() {
               )}
               <span className="font-mono text-xs text-gold/40 tracking-widest block mb-4">{step.num}</span>
               <div className="gold-line mb-4" />
-              <h3 className="text-offwhite font-sans font-semibold text-lg mb-3 group-hover:text-gold transition-colors duration-300">
+              <h3 className="text-offwhite font-sans font-semibold text-base mb-3 group-hover:text-gold transition-colors duration-300">
                 {step.title}
               </h3>
               <p className="text-muted text-sm leading-relaxed">{step.desc}</p>

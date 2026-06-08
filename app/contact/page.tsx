@@ -13,11 +13,13 @@ export const metadata: Metadata = {
     'financial consulting inquiry',
     'Finvesco contact',
   ],
+  alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact Finvesco International',
     description:
       'Let Finvesco International know how we can be of service. Our team responds to every enquiry within 24 hours.',
-    type: 'website',
+    url:      '/contact',
+    type:     'website',
     siteName: 'Finvesco International',
   },
   twitter: {

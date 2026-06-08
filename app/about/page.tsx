@@ -17,11 +17,13 @@ export const metadata: Metadata = {
     'fractional CFO Kenya',
     'investment advisory Africa',
   ],
+  alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Finvesco International — Where Capital Meets Strategy',
     description:
       'Premier consulting and financial advisory firm empowering ambitious businesses across Kenya and globally.',
-    type: 'website',
+    url:      '/about',
+    type:     'website',
     siteName: 'Finvesco International',
   },
   twitter: {

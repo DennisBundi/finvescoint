@@ -36,12 +36,14 @@ export async function generateMetadata({
       'Finvesco International',
       'financial services Kenya',
     ],
+    alternates: { canonical: `/services/${slug}` },
     openGraph: {
-      title: `${service.title} | Finvesco International`,
+      title:    `${service.title} | Finvesco International`,
       description: service.metaDescription,
-      type: 'website',
+      url:      `/services/${slug}`,
+      type:     'website',
       siteName: 'Finvesco International',
-      images: [{ url: service.heroImage, alt: service.heroImageAlt }],
+      images:   [{ url: service.heroImage, alt: service.heroImageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
