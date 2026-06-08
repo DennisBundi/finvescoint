@@ -5,11 +5,11 @@ import { useInView } from 'react-intersection-observer'
 import MagneticButton from '@/components/shared/MagneticButton'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 
-export default function CtaSection() {
+export default function InnerCta() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
 
   return (
-    <section ref={ref} className="py-28 md:py-52 bg-black relative overflow-hidden snap-start">
+    <section ref={ref} className="py-28 md:py-40 bg-black relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <motion.div
           animate={{ opacity: [0.4, 0.9, 0.4] }}
@@ -26,7 +26,7 @@ export default function CtaSection() {
             <div className="gold-line" style={{ transform: 'scaleX(-1)' }} />
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="font-serif text-4xl sm:text-5xl md:text-7xl text-offwhite leading-tight mb-6">
+          <motion.h2 variants={fadeUp} className="font-serif text-4xl sm:text-5xl md:text-6xl text-offwhite leading-tight mb-6">
             Ready to architect<br />
             <span className="italic text-gradient-gold">your growth?</span>
           </motion.h2>

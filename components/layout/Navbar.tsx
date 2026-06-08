@@ -1,7 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import MagneticButton from '@/components/shared/MagneticButton'
@@ -14,8 +13,8 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled]   = useState(false)
+  const [menuOpen, setMenuOpen]   = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -26,26 +25,17 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-navy/90 backdrop-blur-xl border-b border-border/50 py-3' : 'bg-transparent py-5'
-        }`}
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      {/* Pure CSS entrance — no Framer Motion initial/animate that mismatches SSR */}
+      <nav className={`nav-enter fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-navy/90 backdrop-blur-xl border-b border-border/50 py-3'
+          : 'bg-transparent py-4 md:py-5'
+      }`}>
+        <div className="w-full max-w-[1200px] mx-auto flex items-center justify-between" style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
           <Link href="/" className="group flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="Finvesco International"
-              width={40}
-              height={40}
-              className="object-contain group-hover:opacity-90 transition-opacity duration-300"
-            />
             <div className="flex flex-col leading-none">
-              <span className="font-serif text-lg text-offwhite tracking-widest uppercase">FinVesco</span>
-              <span className="font-sans text-[9px] text-gold tracking-[0.35em] uppercase">International</span>
+              <span className="font-serif text-base md:text-lg text-offwhite tracking-widest uppercase">FinVesco</span>
+              <span className="font-sans text-[8px] md:text-[9px] text-gold tracking-[0.35em] uppercase">International</span>
             </div>
           </Link>
 
@@ -71,51 +61,63 @@ export default function Navbar() {
           <MagneticButton className="hidden md:block">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-2.5 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
             >
               Engage Us
             </Link>
           </MagneticButton>
 
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex flex-col justify-center gap-[5px] p-2 -mr-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
-            <motion.span animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 8 : 0 }}   className="block w-6 h-px bg-offwhite origin-center" />
-            <motion.span animate={{ opacity: menuOpen ? 0 : 1 }}                          className="block w-6 h-px bg-offwhite" />
-            <motion.span animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -8 : 0 }} className="block w-6 h-px bg-offwhite origin-center" />
+            <motion.span animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 7 : 0 }}   transition={{ duration: 0.25 }} className="block w-5 h-px bg-offwhite origin-center" />
+            <motion.span animate={{ opacity: menuOpen ? 0 : 1 }}                          transition={{ duration: 0.25 }} className="block w-5 h-px bg-offwhite" />
+            <motion.span animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -7 : 0 }} transition={{ duration: 0.25 }} className="block w-5 h-px bg-offwhite origin-center" />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-black/96 backdrop-blur-2xl flex flex-col items-center justify-center"
             initial={{ opacity: 0, clipPath: 'circle(0% at top right)' }}
             animate={{ opacity: 1, clipPath: 'circle(150% at top right)' }}
             exit={{    opacity: 0, clipPath: 'circle(0% at top right)' }}
-            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
           >
-            <ul className="flex flex-col items-center gap-8">
+            <ul className="flex flex-col items-center gap-10">
               {links.map(({ href, label }, i) => (
                 <motion.li
                   key={href}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 + 0.2 }}
+                  exit={{    opacity: 0, y: 24 }}
+                  transition={{ delay: i * 0.07 + 0.15 }}
                 >
                   <Link
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-serif text-5xl text-offwhite hover:text-gold transition-colors"
+                    className={`font-serif text-4xl sm:text-5xl hover:text-gold transition-colors duration-300 ${
+                      pathname === href ? 'text-gold' : 'text-offwhite'
+                    }`}
                   >
                     {label}
                   </Link>
                 </motion.li>
               ))}
             </ul>
+            <div className="mt-12">
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
+              >
+                Engage Us
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -14,10 +14,10 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-border/50 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-2">
+    <footer className="bg-black border-t border-border/50 pt-12 pb-8 md:pt-20 md:pb-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
+          <div className="col-span-2 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <Image src="/logo.png" alt="Finvesco International" width={36} height={36} className="object-contain" />
               <div className="flex flex-col leading-none">

@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-navy text-offwhite font-sans antialiased">
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body className="bg-navy text-offwhite font-sans antialiased" suppressHydrationWarning>
         <CustomCursor />
         <LenisProvider>
           <Navbar />
           <PageTransition>
-            <main>{children}</main>
+            <main className="w-full">{children}</main>
           </PageTransition>
           <Footer />
         </LenisProvider>

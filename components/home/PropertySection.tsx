@@ -9,16 +9,16 @@ export default function PropertySection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section ref={ref} className="py-32 bg-surface/20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section ref={ref} className="py-28 md:py-52 bg-[#F7F5F0] snap-start">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <motion.div variants={slideLeft} initial="hidden" animate={inView ? 'show' : 'hidden'}>
             <SectionLabel text="Real Assets" />
-            <h2 className="font-serif text-5xl text-offwhite leading-tight mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl text-navy leading-tight mb-6">
               Property<br />
               <span className="italic text-gradient-gold">Investment</span>
             </h2>
-            <p className="text-muted leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
               Finvesco International actively invests in and manages real estate assets
               across Kenya — from residential to commercial properties. Our portfolio
               strategy prioritises long-term capital appreciation and strategic positioning
@@ -35,13 +35,13 @@ export default function PropertySection() {
           <motion.div variants={staggerContainer} initial="hidden" animate={inView ? 'show' : 'hidden'} className="space-y-4">
             {PROPERTIES.map((p) => (
               <motion.div key={p.type} variants={fadeUp}
-                className="flex items-center justify-between p-5 border border-border bg-surface/50 hover:border-gold/40 transition-colors duration-300">
+                className="flex items-center justify-between p-5 border border-gray-200 bg-white hover:border-gold/50 transition-colors duration-300">
                 <div>
-                  <p className="text-offwhite font-sans font-medium">{p.type}</p>
-                  <p className="text-muted text-sm mt-0.5">{p.location}</p>
+                  <p className="text-navy font-sans font-medium">{p.type}</p>
+                  <p className="text-gray-500 text-sm mt-0.5">{p.location}</p>
                 </div>
                 <span className={`text-xs px-3 py-1 border tracking-widest uppercase ${
-                  p.status === 'Active' ? 'border-gold/40 text-gold' : 'border-muted/40 text-muted'
+                  p.status === 'Active' ? 'border-gold/50 text-gold' : 'border-gray-300 text-gray-400'
                 }`}>
                   {p.status}
                 </span>
