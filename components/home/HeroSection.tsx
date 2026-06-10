@@ -62,7 +62,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div
-          className="flex flex-row items-center gap-4"
+          className="flex flex-wrap items-center gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.75 }}
@@ -70,7 +70,7 @@ export default function HeroSection() {
           <MagneticButton>
             <Link
               href="/services"
-              className="btn-primary"
+              className="btn-primary !px-6 sm:!px-9"
             >
               Our Services
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="flex-shrink-0">
@@ -81,7 +81,7 @@ export default function HeroSection() {
           <MagneticButton>
             <Link
               href="/about"
-              className="btn-ghost"
+              className="btn-ghost !px-6 sm:!px-9"
             >
               Our Story
             </Link>
