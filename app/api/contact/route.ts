@@ -1,8 +1,6 @@
 import { Resend } from 'resend'
 import { createClient } from '@supabase/supabase-js'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const TO_EMAIL   = process.env.RESEND_NOTIFICATION_EMAIL ?? 'Bernard@finvescoint.com'
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL         ?? 'Finvesco International <noreply@finvescoint.com>'
 
@@ -18,15 +16,22 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Missing required fields' }, { status: 400 })
   }
 
-  const [dbResult, emailResult] = await Promise.allSettled([
-    supabase.from('contact_submissions').insert({
-      full_name: name,
-      email,
-      phone:   phone   || null,
-      service,
-      message: message || null,
-    }),
-    resend.emails.send({
+  const { error: dbError } = await supabase.from('contact_submissions').insert({
+    full_name: name,
+    email,
+    phone:   phone   || null,
+    service,
+    message: message || null,
+  })
+
+  if (dbError) {
+    console.error('[contact] Supabase error:', dbError)
+    return Response.json({ error: 'Failed to submit enquiry' }, { status: 500 })
+  }
+
+  if (process.env.RESEND_API_KEY) {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    const { error: emailError } = await resend.emails.send({
       from:    FROM_EMAIL,
       to:      TO_EMAIL,
       replyTo: email,
@@ -58,16 +63,10 @@ export async function POST(request: Request) {
           <p style="margin:32px 0 0;font-size:11px;color:#5a6478;letter-spacing:1px;">Reply directly to this email to respond to ${name}.</p>
         </div>
       `,
-    }),
-  ])
-
-  if (dbResult.status === 'rejected') {
-    console.error('[contact] Supabase error:', dbResult.reason)
-  }
-  if (emailResult.status === 'rejected' || (emailResult.status === 'fulfilled' && emailResult.value.error)) {
-    const err = emailResult.status === 'rejected' ? emailResult.reason : emailResult.value.error
-    console.error('[contact] Resend error:', JSON.stringify(err))
-    return Response.json({ error: 'Failed to send message' }, { status: 500 })
+    })
+    if (emailError) {
+      console.error('[contact] Resend error:', JSON.stringify(emailError))
+    }
   }
 
   return Response.json({ success: true })
