@@ -31,10 +31,10 @@ export async function generateMetadata({
     description: service.metaDescription,
     keywords: [
       service.title,
-      `${service.shortTitle} Kenya`,
-      `${service.shortTitle} Nairobi`,
+      service.shortTitle,
       'Finvesco International',
-      'financial services Kenya',
+      'financial services',
+      'global financial consulting',
     ],
     alternates: { canonical: `/services/${slug}` },
     openGraph: {
@@ -75,13 +75,8 @@ export default async function ServicePage({
       '@type': 'Organization',
       name: 'Finvesco International',
       url: 'https://finvescoint.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Nairobi',
-        addressCountry: 'KE',
-      },
     },
-    areaServed: ['Kenya', 'East Africa', 'Global'],
+    areaServed: 'Global',
     url: `https://finvescoint.com/services/${service.slug}`,
   }
 

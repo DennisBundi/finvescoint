@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             <p className="text-muted text-sm leading-relaxed max-w-xs">
               Where capital meets strategy. A premier consulting, investment,
-              and branding firm serving ambitious businesses across Kenya and globally.
+              and branding firm serving ambitious businesses globally.
             </p>
             <div className="gold-line mt-8" />
           </div>

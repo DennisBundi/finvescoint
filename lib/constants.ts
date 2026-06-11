@@ -22,11 +22,6 @@ export const PILLARS = [
   { num: '03', title: 'Branding',    subtitle: 'Identities That Command Market Attention',      href: '/services/branding' },
 ]
 
-export const PROPERTIES = [
-  { type: 'Residential', location: 'Nairobi, Kenya', status: 'Active'    },
-  { type: 'Commercial',  location: 'Nairobi, Kenya', status: 'Active'    },
-  { type: 'Mixed Use',   location: 'Kenya',          status: 'Acquiring' },
-]
 
 export const EXPORT_STEPS = [
   { num: '01', title: 'Product Sourcing',   desc: 'Identifying and qualifying premium products ready for international markets.' },

@@ -4,12 +4,12 @@ import ContactSection from '@/components/contact/ContactSection'
 export const metadata: Metadata = {
   title: 'Contact Us | Finvesco International',
   description:
-    'Contact Finvesco International for expert financial consulting, business acquisition advisory, fractional CFO services, and strategic financial guidance. Based in Nairobi, Kenya — serving clients globally. Our team responds within 24 hours.',
+    'Contact Finvesco International for expert financial consulting, business acquisition advisory, fractional CFO services, and strategic financial guidance. Our team responds within 24 hours.',
   keywords: [
     'contact Finvesco International',
-    'hire financial consultant Kenya',
+    'hire financial consultant',
     'fractional CFO enquiry',
-    'business advisory contact Nairobi',
+    'business advisory contact',
     'financial consulting inquiry',
     'Finvesco contact',
   ],
@@ -34,7 +34,7 @@ const jsonLd = {
   '@type': 'ContactPage',
   name: 'Contact Finvesco International',
   description:
-    'Contact form and information for Finvesco International — a premier financial consulting firm based in Nairobi, Kenya.',
+    'Contact form and information for Finvesco International — a premier financial consulting, investment, and branding firm.',
   url: 'https://finvescoint.com/contact',
   mainEntity: {
     '@type': 'Organization',
@@ -42,13 +42,8 @@ const jsonLd = {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
-      areaServed: ['KE', 'Global'],
+      areaServed: 'Global',
       availableLanguage: 'English',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Nairobi',
-      addressCountry: 'KE',
     },
   },
 }

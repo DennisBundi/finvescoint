@@ -1,9 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
+import { Resend } from 'resend'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   const { email } = await request.json()
@@ -17,11 +20,20 @@ export async function POST(request: Request) {
     .insert({ email })
 
   if (error) {
-    if (error.code === '23505') {
-      return Response.json({ success: true })
+    if (error.code !== '23505') {
+      console.error('[subscribe] Supabase error:', error)
+      return Response.json({ error: 'Failed to subscribe' }, { status: 500 })
     }
-    console.error('[subscribe] Supabase error:', error)
-    return Response.json({ error: 'Failed to subscribe' }, { status: 500 })
+  }
+
+  if (process.env.RESEND_AUDIENCE_ID) {
+    const { error: resendError } = await resend.contacts.create({
+      audienceId: process.env.RESEND_AUDIENCE_ID,
+      email,
+    })
+    if (resendError) {
+      console.error('[subscribe] Resend audience error:', resendError)
+    }
   }
 
   return Response.json({ success: true })

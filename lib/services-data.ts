@@ -34,7 +34,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Fractional CFO',
     tagline: 'Executive financial leadership, without the full-time cost',
     metaDescription:
-      'Finvesco International provides fractional CFO services for small and midsize businesses in Kenya — offering expert financial leadership, strategy, budgeting, cash flow management, and board-level reporting on a flexible engagement model.',
+      'Finvesco International provides fractional CFO services for small and midsize businesses — offering expert financial leadership, strategy, budgeting, cash flow management, and board-level reporting on a flexible engagement model.',
     heroImage:
       'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Financial data and reports displayed on a professional screen',
@@ -71,7 +71,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Consulting',
     tagline: 'Strategic clarity for your most complex financial decisions',
     metaDescription:
-      'Finvesco International offers expert financial consulting services in Kenya — covering financial planning, cash flow optimisation, investment strategy, tax planning, and business growth advisory for small businesses and startups.',
+      'Finvesco International offers expert financial consulting services — covering financial planning, cash flow optimisation, investment strategy, tax planning, and business growth advisory for small businesses and startups globally.',
     heroImage:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Strategy session with financial charts and business data',
@@ -108,7 +108,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Acquisitions',
     tagline: 'Informed acquisitions built on rigorous due diligence',
     metaDescription:
-      'Finvesco International provides business acquisition advisory and due diligence services in Kenya — including business valuation, financial analysis, deal structuring, risk assessment, and post-acquisition integration planning.',
+      'Finvesco International provides business acquisition advisory and due diligence services — including business valuation, financial analysis, deal structuring, risk assessment, and post-acquisition integration planning.',
     heroImage:
       'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Business contract and agreement documentation',
@@ -145,7 +145,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Financial Forecasts',
     tagline: 'See your financial future before it happens',
     metaDescription:
-      'Finvesco International delivers financial forecasting and pro forma financial services in Kenya — including revenue projections, expense modelling, cash flow forecasts, and investor-ready pro forma income statements, balance sheets, and cash flow statements.',
+      'Finvesco International delivers financial forecasting and pro forma financial services — including revenue projections, expense modelling, cash flow forecasts, and investor-ready pro forma income statements, balance sheets, and cash flow statements.',
     heroImage:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Financial analyst reviewing detailed forecasting charts and projections',
@@ -182,7 +182,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Sales Leaseback',
     tagline: 'Unlock the capital in your assets without losing control',
     metaDescription:
-      'Finvesco International provides sales and leaseback advisory services in Kenya — helping businesses unlock capital tied up in property and equipment while retaining operational control through expert negotiation of leaseback terms.',
+      'Finvesco International provides sales and leaseback advisory services — helping businesses unlock capital tied up in assets while retaining operational control through expert negotiation of leaseback terms.',
     heroImage:
       'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Commercial property building — candidate for a sale and leaseback transaction',
@@ -219,7 +219,7 @@ export const SERVICES_DATA: ServiceData[] = [
     shortTitle: 'Financial Reporting',
     tagline: 'Accurate reporting that powers confident decision-making',
     metaDescription:
-      'Finvesco International delivers accurate, compliant financial reporting services in Kenya — including monthly, quarterly, and annual financial statements, balance sheets, income statements, cash flow statements, and management reporting for businesses of all sizes.',
+      'Finvesco International delivers accurate, compliant financial reporting services — including monthly, quarterly, and annual financial statements, balance sheets, income statements, cash flow statements, and management reporting for businesses of all sizes.',
     heroImage:
       'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1920&q=80',
     heroImageAlt: 'Financial reports and statements displayed on a professional laptop screen',
