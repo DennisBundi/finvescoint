@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 }
 
-const SLUGS = ['consulting', 'financial-forecasts', 'financial-reporting']
+const SLUGS = ['consulting-services', 'financial-forecasts', 'financial-reporting']
 const services = SLUGS.map((slug) => SERVICES_DATA.find((s) => s.slug === slug)!)
 
 export default function ConsultingPage() {

@@ -62,11 +62,11 @@ export const SERVICES_DATA: ServiceData[] = [
       { title: 'Immediate Impact', desc: 'Our fractional CFOs are operational within days, not months — no lengthy onboarding or recruitment cycles to slow you down.' },
       { title: 'Scalable Support', desc: 'Scale involvement up or down as your business needs change — from a single strategic sprint to a sustained multi-year engagement.' },
     ],
-    relatedSlugs: ['consulting', 'financial-forecasts'],
+    relatedSlugs: ['consulting-services', 'financial-forecasts'],
   },
 
   {
-    slug: 'consulting',
+    slug: 'consulting-services',
     title: 'Consulting Services',
     shortTitle: 'Consulting',
     tagline: 'Strategic clarity for your most complex financial decisions',
@@ -136,7 +136,7 @@ export const SERVICES_DATA: ServiceData[] = [
       { title: 'Compliance Protection', desc: 'We ensure full GAAP compliance and regulatory adherence throughout the acquisition, minimising legal and financial exposure.' },
       { title: 'Negotiation Leverage', desc: 'Our deal structuring expertise equips you to negotiate favourable terms and walk away from deals that do not meet the standard.' },
     ],
-    relatedSlugs: ['consulting', 'financial-forecasts'],
+    relatedSlugs: ['consulting-services', 'financial-forecasts'],
   },
 
   {
@@ -210,7 +210,7 @@ export const SERVICES_DATA: ServiceData[] = [
       { title: 'Balance Sheet Optimisation', desc: 'Improve your balance sheet leverage ratios and free capital for higher-return investments or debt reduction.' },
       { title: 'Tax Advantages', desc: 'Lease payments may be fully tax-deductible as a business operating expense, improving your effective tax rate and cash position.' },
     ],
-    relatedSlugs: ['business-acquisitions', 'consulting'],
+    relatedSlugs: ['business-acquisitions', 'consulting-services'],
   },
 
   {
@@ -247,7 +247,7 @@ export const SERVICES_DATA: ServiceData[] = [
       { title: 'Management Insights', desc: "We don't just produce numbers — we translate them into actionable business intelligence that informs leadership decisions." },
       { title: 'Investor Confidence', desc: 'Accurate, transparent reporting builds the trust of investors, lenders, and board members who rely on your financials to make decisions.' },
     ],
-    relatedSlugs: ['fractional-cfo', 'consulting'],
+    relatedSlugs: ['fractional-cfo', 'consulting-services'],
   },
 ]
 

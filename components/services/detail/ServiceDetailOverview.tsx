@@ -27,11 +27,11 @@ export default function ServiceDetailOverview({ service }: Props) {
             className="md:sticky md:top-28"
           >
             <SectionLabel text="Overview" />
-            <h2 className="font-serif text-3xl md:text-4xl text-navy leading-tight mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl text-navy leading-[1.1] tracking-tight mb-6">
               What We<br />
               <span className="italic text-gradient-gold">Deliver</span>
             </h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-8">
+            <p className="text-gray-500 text-base leading-loose mb-8">
               {service.tagline}
             </p>
             <MagneticButton>
@@ -58,10 +58,10 @@ export default function ServiceDetailOverview({ service }: Props) {
               <motion.p
                 key={i}
                 variants={fadeUp}
-                className={`leading-relaxed ${
+                className={`${
                   i === 0
-                    ? 'text-navy text-lg md:text-xl font-medium'
-                    : 'text-gray-600 text-base'
+                    ? 'font-serif text-xl md:text-2xl text-navy leading-[1.6] font-normal'
+                    : 'text-gray-400 text-base md:text-[17px] leading-[1.85] tracking-[0.01em]'
                 }`}
               >
                 {para}

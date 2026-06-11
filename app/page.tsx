@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import HeroSection          from '@/components/home/HeroSection'
-import StatsBar             from '@/components/home/StatsBar'
 import MarqueeSection       from '@/components/home/MarqueeSection'
 import HowItWorksSection    from '@/components/home/HowItWorksSection'
 import AboutPreviewSection  from '@/components/home/AboutPreviewSection'
@@ -74,7 +73,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HeroSection />
-      <StatsBar />
       <MarqueeSection />
       <HowItWorksSection />
       <AboutPreviewSection />

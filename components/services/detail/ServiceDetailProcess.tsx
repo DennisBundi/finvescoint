@@ -18,31 +18,33 @@ export default function ServiceDetailProcess({ service }: Props) {
         <motion.div variants={staggerContainer} initial="hidden" animate={inView ? 'show' : 'hidden'}>
           <motion.div variants={fadeUp} className="mb-14 md:mb-20">
             <SectionLabel text="Our Process" />
-            <h2 className="font-serif text-4xl md:text-6xl text-offwhite leading-tight">
+            <h2 className="font-serif text-5xl md:text-7xl text-offwhite leading-[1.05] tracking-tight">
               How We<br />
               <span className="italic text-gradient-gold">Deliver</span>
             </h2>
           </motion.div>
 
-          {/* Horizontal step cards — same visual as ApproachSection */}
+          {/* Horizontal step cards */}
           <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-0 border border-border border-b-0 sm:border-0">
             {service.process.map((step, i) => (
               <motion.div
                 key={step.num}
                 variants={fadeUp}
-                className="relative p-5 md:p-8 border-b md:border-b-0 md:border-r border-border last:border-0 group"
+                className="relative p-5 md:p-8 border-b md:border-b-0 md:border-r border-border last:border-0 group overflow-hidden"
               >
                 {i < service.process.length - 1 && (
                   <div className="hidden md:block absolute -right-1.5 top-8 w-3 h-3 rounded-full border-2 border-gold bg-navy z-10" />
                 )}
-                <span className="font-mono text-xs text-gold/40 tracking-widest block mb-4">
+                <span className="font-mono text-4xl md:text-5xl font-bold text-gold/[0.12] absolute bottom-4 right-4 leading-none select-none pointer-events-none">
                   {step.num}
                 </span>
-                <div className="gold-line mb-4" />
-                <h3 className="text-offwhite font-sans font-semibold text-base mb-3 group-hover:text-gold transition-colors duration-300">
-                  {step.title}
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">{step.desc}</p>
+                <div className="relative z-10">
+                  <div className="gold-line mb-4" />
+                  <h3 className="font-serif font-normal text-lg md:text-xl text-offwhite leading-snug mb-3 group-hover:text-gold transition-colors duration-300">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted text-sm leading-[1.85] tracking-[0.01em]">{step.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
