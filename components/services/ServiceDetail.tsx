@@ -43,12 +43,13 @@ export default function ServiceDetail({
           <motion.div variants={slideLeft} initial="hidden" animate={inView ? 'show' : 'hidden'}>
             <span className="font-mono text-xs text-gold/60 tracking-widest block mb-4">{num}</span>
             <SectionLabel text="Service" />
-            <h2 className="font-serif text-4xl md:text-6xl text-navy leading-tight mb-6">{title}</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-navy leading-tight mb-3">{title}</h2>
+            <div className="w-10 h-px bg-gold mb-8" />
             {paragraphs.map((p, i) => (
               <p
                 key={i}
-                className={`text-gray-600 leading-relaxed ${
-                  i < paragraphs.length - 1 ? 'mb-4' : 'mb-8'
+                className={`text-gray-700 text-base leading-[1.85] ${
+                  i < paragraphs.length - 1 ? 'mb-5' : 'mb-8'
                 }`}
               >
                 {p}

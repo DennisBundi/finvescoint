@@ -19,7 +19,6 @@ const SERVICES = [
 const CONTACT_INFO = [
   { label: 'Email', value: 'hello@finvescoint.com' },
   { label: 'Phone', value: '+254 700 000 000' },
-  { label: 'Location', value: 'Nairobi, Kenya' },
   { label: 'Response Time', value: 'Within 24 hours' },
 ]
 

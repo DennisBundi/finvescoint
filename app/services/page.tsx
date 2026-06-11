@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
 import { SERVICES_DATA } from '@/lib/services-data'
 import ServicesHero from '@/components/services/ServicesHero'
+import ServicesCategoryNav from '@/components/services/ServicesCategoryNav'
 import ServiceDetail from '@/components/services/ServiceDetail'
 import InnerCta from '@/components/shared/InnerCta'
 
 export const metadata: Metadata = {
   title: 'Financial Services | Finvesco International',
   description:
-    'Finvesco International offers comprehensive financial services: Fractional CFO leadership, consulting, business acquisitions and due diligence, financial forecasting, sales leaseback negotiations, and financial reporting — tailored for businesses in Kenya and globally.',
+    'Finvesco International offers comprehensive financial services: Fractional CFO leadership, consulting, business acquisitions and due diligence, financial forecasting, sales leaseback negotiations, and financial reporting — tailored for ambitious businesses globally.',
   keywords: [
-    'fractional CFO Kenya',
-    'financial consulting Nairobi',
-    'business acquisitions Kenya',
+    'fractional CFO services',
+    'financial consulting',
+    'business acquisitions',
     'financial forecasting services',
     'sales leaseback negotiations',
-    'financial reporting Kenya',
-    'consulting services Nairobi',
-    'business due diligence Kenya',
+    'financial reporting',
+    'consulting services',
+    'business due diligence',
     'proforma financials',
   ],
   alternates: { canonical: '/services' },
@@ -51,7 +52,7 @@ const jsonLd = {
       description: s.metaDescription,
       url: `https://finvescoint.com/services/${s.slug}`,
       provider: { '@type': 'Organization', name: 'Finvesco International' },
-      areaServed: 'Kenya',
+      areaServed: 'Global',
     },
   })),
 }
@@ -65,6 +66,7 @@ export default function ServicesPage() {
       />
       <main>
         <ServicesHero />
+        <ServicesCategoryNav />
         {SERVICES_DATA.map((service, i) => (
           <ServiceDetail
             key={service.slug}

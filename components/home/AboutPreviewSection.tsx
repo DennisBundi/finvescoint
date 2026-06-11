@@ -7,10 +7,10 @@ import MagneticButton from '@/components/shared/MagneticButton'
 import SectionLabel from '@/components/shared/SectionLabel'
 
 const FACTS = [
-  { value: '200+',  label: 'Clients Served'   },
-  { value: '$50M+', label: 'Assets Advised'   },
-  { value: '12+',   label: 'Industries'        },
-  { value: '98%',   label: 'Client Retention' },
+  { value: '200+', label: 'Clients Served'   },
+  { value: '15+',  label: 'Years Experience' },
+  { value: '12+',  label: 'Industries'       },
+  { value: '98%',  label: 'Client Retention' },
 ]
 
 export default function AboutPreviewSection() {
@@ -33,7 +33,7 @@ export default function AboutPreviewSection() {
               <span className="italic text-gradient-gold">Ambitious Business</span>
             </h2>
             <p className="text-muted text-base md:text-lg font-sans font-light leading-relaxed mb-5 max-w-lg">
-              Finvesco International is a premier financial advisory and investment firm headquartered in Kenya, serving ambitious businesses across Africa and beyond.
+              Finvesco International is a premier financial advisory and investment firm serving ambitious businesses globally.
             </p>
             <p className="text-muted text-base font-sans font-light leading-relaxed mb-12 max-w-lg">
               We combine deep financial expertise with strategic precision — delivering the clarity, capital, and execution support that ambitious leaders need to grow with confidence.

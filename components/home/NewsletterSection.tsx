@@ -7,12 +7,28 @@ import SectionLabel from '@/components/shared/SectionLabel'
 
 export default function NewsletterSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
-  const [email, setEmail]       = useState('')
+  const [email, setEmail]         = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading]     = useState(false)
+  const [error, setError]         = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) setSubmitted(true)
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) throw new Error()
+      setSubmitted(true)
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -60,10 +76,11 @@ export default function NewsletterSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 bg-surface border border-border text-offwhite placeholder:text-muted/50 text-sm px-4 py-3.5 focus:border-gold focus:outline-none transition-colors duration-300"
                 />
-                <button type="submit" className="btn-primary whitespace-nowrap">
-                  Subscribe
+                <button type="submit" disabled={loading} className="btn-primary whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed">
+                  {loading ? 'Subscribing…' : 'Subscribe'}
                 </button>
               </form>
+              {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
             )}
           </motion.div>
         </motion.div>

@@ -6,7 +6,6 @@ import HowItWorksSection    from '@/components/home/HowItWorksSection'
 import AboutPreviewSection  from '@/components/home/AboutPreviewSection'
 import ServicesGridSection  from '@/components/home/ServicesGridSection'
 import PillarsSection       from '@/components/home/PillarsSection'
-import PropertySection      from '@/components/home/PropertySection'
 import ExportSection        from '@/components/home/ExportSection'
 import ApproachSection      from '@/components/home/ApproachSection'
 import NewsletterSection    from '@/components/home/NewsletterSection'
@@ -14,25 +13,25 @@ import CtaSection           from '@/components/home/CtaSection'
 
 export const metadata: Metadata = {
   title:       'Finvesco International | Where Capital Meets Strategy',
-  description: 'Finvesco International is a premier financial advisory and consulting firm based in Nairobi, Kenya. Expert Fractional CFO services, business acquisition advisory, financial forecasting, and strategic consulting for ambitious businesses across Africa and globally.',
+  description: 'Finvesco International is a premier financial advisory and consulting firm. Expert Fractional CFO services, business acquisition advisory, financial forecasting, and strategic consulting for ambitious businesses globally.',
   keywords: [
     'Finvesco International',
-    'financial advisory Kenya',
-    'consulting firm Nairobi',
-    'fractional CFO Kenya',
-    'business acquisitions Kenya',
-    'financial consulting Africa',
-    'investment advisory Nairobi',
+    'financial advisory',
+    'consulting firm',
+    'fractional CFO',
+    'business acquisitions',
+    'financial consulting',
+    'investment advisory',
   ],
   alternates: { canonical: '/' },
   openGraph: {
     title:       'Finvesco International — Where Capital Meets Strategy',
-    description: 'Premier financial advisory and consulting firm based in Nairobi, Kenya — serving ambitious businesses across Africa and globally.',
+    description: 'Premier financial advisory and consulting firm serving ambitious businesses globally.',
     url:         '/',
   },
   twitter: {
     title:       'Finvesco International — Where Capital Meets Strategy',
-    description: 'Premier financial advisory and consulting firm based in Nairobi, Kenya.',
+    description: 'Premier financial advisory and consulting firm serving ambitious businesses globally.',
   },
 }
 
@@ -54,20 +53,15 @@ const jsonLd = {
       alternateName:  'Finvesco',
       url:            'https://finvescoint.com',
       logo:           'https://finvescoint.com/logo.png',
-      description:    'Premier consulting, investment, and financial advisory firm based in Nairobi, Kenya.',
+      description:    'Premier consulting, investment, and financial advisory firm.',
       foundingDate:   '2024',
-      address: {
-        '@type':          'PostalAddress',
-        addressLocality:  'Nairobi',
-        addressCountry:   'KE',
-      },
       contactPoint: {
         '@type':             'ContactPoint',
         contactType:         'customer service',
         email:               'hello@finvescoint.com',
         availableLanguage:   'English',
       },
-      areaServed: ['Kenya', 'East Africa', 'Global'],
+      areaServed: 'Global',
     },
   ],
 }
@@ -86,7 +80,6 @@ export default function HomePage() {
       <AboutPreviewSection />
       <ServicesGridSection />
       <PillarsSection />
-      <PropertySection />
       <ExportSection />
       <ApproachSection />
       <NewsletterSection />

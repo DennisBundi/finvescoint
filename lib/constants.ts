@@ -1,19 +1,19 @@
 export const SITE_NAME        = 'Finvesco International'
 export const SITE_TAGLINE     = 'Where Capital Meets Strategy'
-export const SITE_DESCRIPTION = 'Finvesco International is a premier consulting, investment, and branding firm. We partner with ambitious businesses across Kenya and internationally to drive strategic growth and build commanding market positions.'
+export const SITE_DESCRIPTION = 'Finvesco International is a premier consulting, investment, and branding firm. We partner with ambitious businesses globally to drive strategic growth, structure capital, and build commanding market positions.'
 
 export const STATS = [
-  { value: 200, suffix: '+',  label: 'Clients Served' },
-  { value: 50,  suffix: 'M+', label: 'Assets Advised ($)' },
-  { value: 12,  suffix: '+',  label: 'Industries' },
-  { value: 98,  suffix: '%',  label: 'Client Retention' },
+  { value: 200, suffix: '+', label: 'Clients Served' },
+  { value: 15,  suffix: '+', label: 'Years Experience' },
+  { value: 12,  suffix: '+', label: 'Industries' },
+  { value: 98,  suffix: '%', label: 'Client Retention' },
 ]
 
 export const MARQUEE_ITEMS = [
   'Strategic Consulting', 'Investment Advisory', 'Brand Architecture',
   'Financial Services', 'M&A Due Diligence', 'Fractional CFO',
   'Market Expansion', 'Capital Strategy', 'Product Export',
-  'Property Investment', 'Sales Leaseback', 'Business Valuation',
+  'Sales Leaseback', 'Business Valuation', 'Global Markets',
 ]
 
 export const PILLARS = [
@@ -29,10 +29,10 @@ export const PROPERTIES = [
 ]
 
 export const EXPORT_STEPS = [
-  { num: '01', title: 'Product Sourcing',   desc: 'Identifying and qualifying premium African products for global markets.' },
+  { num: '01', title: 'Product Sourcing',   desc: 'Identifying and qualifying premium products ready for international markets.' },
   { num: '02', title: 'Brand & Packaging',  desc: 'Crafting visual identity and packaging that meets international standards.' },
   { num: '03', title: 'Export Marketing',   desc: 'Market entry strategy and distribution channel development.' },
-  { num: '04', title: 'Global Reach',       desc: 'Connecting African producers to international buyers and retailers.' },
+  { num: '04', title: 'Global Reach',       desc: 'Connecting producers to international buyers, retailers, and distribution networks.' },
 ]
 
 export const APPROACH_STEPS = [

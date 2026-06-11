@@ -36,8 +36,8 @@ export const SERVICES_DATA: ServiceData[] = [
     metaDescription:
       'Finvesco International provides fractional CFO services for small and midsize businesses in Kenya — offering expert financial leadership, strategy, budgeting, cash flow management, and board-level reporting on a flexible engagement model.',
     heroImage:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80',
-    heroImageAlt: 'Financial executive at work reviewing strategic reports',
+      'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1920&q=80',
+    heroImageAlt: 'Financial data and reports displayed on a professional screen',
     listingParagraphs: [
       'We provide high-level financial management and strategic guidance to both small and midsize companies — delivering executive-calibre financial leadership without the cost of a full-time hire.',
       'Our fractional CFO services cover financial strategy development, budget and cash flow management, reporting and compliance oversight, risk mitigation, and operational streamlining. We engage on a project or retainer basis, offering the flexibility your business needs at every growth stage.',
@@ -110,8 +110,8 @@ export const SERVICES_DATA: ServiceData[] = [
     metaDescription:
       'Finvesco International provides business acquisition advisory and due diligence services in Kenya — including business valuation, financial analysis, deal structuring, risk assessment, and post-acquisition integration planning.',
     heroImage:
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80',
-    heroImageAlt: 'Business professionals finalising a strategic acquisition agreement',
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80',
+    heroImageAlt: 'Business contract and agreement documentation',
     listingParagraphs: [
       'Our advisory services for business acquisitions and due diligence ensure you make informed, strategic decisions while minimising risk. We provide accurate business valuation to determine fair market value, analyse financial statements, and assess profitability through comprehensive financial and operational due diligence.',
       'We assist in structuring and negotiating deals to secure favourable terms, while advising on optimal funding strategies including debt and equity financing. Our experts develop post-acquisition integration plans for seamless transition, cost optimisation, and performance monitoring.',

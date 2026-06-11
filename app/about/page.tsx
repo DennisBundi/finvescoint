@@ -7,21 +7,21 @@ import InnerCta from '@/components/shared/InnerCta'
 export const metadata: Metadata = {
   title: 'About Us | Finvesco International — Premier Financial Consulting Firm',
   description:
-    'Finvesco International is a premier consulting and financial advisory firm based in Nairobi, Kenya. We empower small businesses and startups with expert financial services, strategic advisory, and capital structuring for sustainable growth.',
+    'Finvesco International is a premier consulting and financial advisory firm. We empower businesses with expert financial services, strategic advisory, and capital structuring for sustainable growth.',
   keywords: [
     'Finvesco International',
     'about us',
-    'consulting firm Kenya',
-    'financial advisory Nairobi',
-    'business strategy Kenya',
-    'fractional CFO Kenya',
-    'investment advisory Africa',
+    'consulting firm',
+    'financial advisory',
+    'business strategy',
+    'fractional CFO',
+    'investment advisory',
   ],
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Finvesco International — Where Capital Meets Strategy',
     description:
-      'Premier consulting and financial advisory firm empowering ambitious businesses across Kenya and globally.',
+      'Premier consulting and financial advisory firm empowering ambitious businesses globally.',
     url:      '/about',
     type:     'website',
     siteName: 'Finvesco International',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Finvesco International',
     description:
-      'Premier consulting and financial advisory firm empowering ambitious businesses across Kenya and globally.',
+      'Premier consulting and financial advisory firm empowering ambitious businesses globally.',
   },
 }
 
@@ -40,15 +40,10 @@ const jsonLd = {
   name: 'Finvesco International',
   alternateName: 'Finvesco',
   description:
-    'Premier consulting, investment, and financial advisory firm based in Nairobi, Kenya, serving small businesses and startups globally.',
+    'Premier consulting, investment, and financial advisory firm serving businesses globally.',
   url: 'https://finvescoint.com',
   foundingDate: '2024',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Nairobi',
-    addressCountry: 'KE',
-  },
-  areaServed: ['Kenya', 'East Africa', 'Global'],
+  areaServed: 'Global',
   serviceType: [
     'Fractional CFO Services',
     'Financial Consulting',

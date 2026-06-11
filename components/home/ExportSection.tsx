@@ -19,7 +19,7 @@ export default function ExportSection() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
             Through our investee company, Finvesco International is building bridges
-            between African product excellence and global markets — from sourcing
+            between product excellence and global markets — from sourcing
             and packaging to branded export marketing.
           </p>
         </motion.div>

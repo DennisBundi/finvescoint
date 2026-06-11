@@ -9,7 +9,7 @@ export default function AboutHero() {
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80')`,
+        backgroundImage: `url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundColor: '#0A0F1E',
@@ -32,7 +32,7 @@ export default function AboutHero() {
 
           <motion.p variants={fadeUp} className="text-muted text-base md:text-xl font-sans font-light max-w-2xl leading-relaxed mb-12">
             At Finvesco International, we partner with forward-thinking businesses and entrepreneurs
-            across Kenya and beyond — providing strategic intelligence, capital structuring,
+            globally — providing strategic intelligence, capital structuring,
             and expert financial advisory to achieve lasting competitive advantage.
           </motion.p>
 
