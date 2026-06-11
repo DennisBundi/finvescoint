@@ -67,20 +67,22 @@ export default function NewsletterSection() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  required
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-surface border border-border text-offwhite placeholder:text-muted/50 text-sm px-4 py-3.5 focus:border-gold focus:outline-none transition-colors duration-300"
-                />
-                <button type="submit" disabled={loading} className="btn-primary whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed">
-                  {loading ? 'Subscribing…' : 'Subscribe'}
-                </button>
-              </form>
-              {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
+              <div className="flex flex-col gap-2">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1 bg-surface border border-border text-offwhite placeholder:text-muted/50 text-sm px-4 py-3.5 focus:border-gold focus:outline-none transition-colors duration-300"
+                  />
+                  <button type="submit" disabled={loading} className="btn-primary whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed">
+                    {loading ? 'Subscribing…' : 'Subscribe'}
+                  </button>
+                </form>
+                {error && <p className="text-red-400 text-xs">{error}</p>}
+              </div>
             )}
           </motion.div>
         </motion.div>
