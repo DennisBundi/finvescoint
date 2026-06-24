@@ -1,10 +1,16 @@
+import { readFileSync } from 'fs'
+import { join } from 'path'
 import { ImageResponse } from 'next/og'
 
+export const runtime     = 'nodejs'
 export const size         = { width: 1200, height: 630 }
 export const contentType  = 'image/png'
 export const alt          = 'Finvesco International — Where Capital Meets Strategy'
 
 export default function Image() {
+  const logoBuffer = readFileSync(join(process.cwd(), 'public', 'logo.png'))
+  const logoSrc    = `data:image/png;base64,${logoBuffer.toString('base64')}`
+
   return new ImageResponse(
     (
       <div
@@ -40,6 +46,14 @@ export default function Image() {
         <div style={{ position: 'absolute', bottom: 40, left: 40, width: 32, height: 32, borderBottom: '2px solid #C9A84C', borderLeft: '2px solid #C9A84C', display: 'flex' }} />
         {/* Corner accent — bottom right */}
         <div style={{ position: 'absolute', bottom: 40, right: 40, width: 32, height: 32, borderBottom: '2px solid #C9A84C', borderRight: '2px solid #C9A84C', display: 'flex' }} />
+
+        {/* Logo */}
+        <img
+          src={logoSrc}
+          width={80}
+          height={80}
+          style={{ objectFit: 'contain', marginBottom: 32 }}
+        />
 
         {/* Top label */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 52 }}>
