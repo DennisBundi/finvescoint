@@ -17,9 +17,11 @@ export const metadata: Metadata = {
     type:     'website',
     locale:   'en_US',
     siteName: SITE_NAME,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Finvesco International — Where Capital Meets Strategy' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card:   'summary_large_image',
+    images: ['/opengraph-image'],
   },
   robots: {
     index:  true,
