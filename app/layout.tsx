@@ -7,6 +7,7 @@ import LenisProvider from '@/components/layout/LenisProvider'
 import CustomCursor from '@/components/shared/CustomCursor'
 import PageTransition from '@/components/shared/PageTransition'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://finvescoint.com'),
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </PageTransition>
           <Footer />
         </LenisProvider>
+        <Analytics />
       </body>
     </html>
   )
