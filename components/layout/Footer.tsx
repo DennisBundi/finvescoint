@@ -64,7 +64,11 @@ export default function Footer() {
             © {new Date().getFullYear()} Finvesco International. All rights reserved.
           </p>
           <div className="flex gap-6">
-            {['LinkedIn', 'Facebook', 'Instagram'].map(s => (
+            <a href="https://www.linkedin.com/company/finvescoint/" target="_blank" rel="noopener noreferrer"
+              className="text-muted text-xs hover:text-gold transition-colors duration-300 tracking-wider uppercase">
+              LinkedIn
+            </a>
+            {['Facebook', 'Instagram'].map(s => (
               <a key={s} href="#" target="_blank" rel="noopener noreferrer"
                 className="text-muted text-xs hover:text-gold transition-colors duration-300 tracking-wider uppercase">
                 {s}
