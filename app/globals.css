@@ -66,10 +66,6 @@ html {
   width: 100%;
 }
 
-@media (pointer: fine) {
-  html { cursor: none; }
-}
-
 body {
   background-color: var(--color-navy);
   color: var(--color-offwhite);

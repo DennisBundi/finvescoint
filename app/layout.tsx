@@ -5,7 +5,6 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import LenisProvider from '@/components/layout/LenisProvider'
-import CustomCursor from '@/components/shared/CustomCursor'
 import PageTransition from '@/components/shared/PageTransition'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
 
@@ -47,7 +46,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         gtag('config', 'G-WTJRL970RQ');
       `}</Script>
       <body className="bg-navy text-offwhite font-sans antialiased" suppressHydrationWarning>
-        <CustomCursor />
         <LenisProvider>
           <Navbar />
           <PageTransition>
